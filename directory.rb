@@ -26,8 +26,21 @@
 # 	{:name => "Alex", :cohort => :June, :hobby => "music"},
 # 	{:name => "Jeremy", :cohort => :June, :hobby => "not being here"}
 # ]
+
+def check_month(cohort)
+	months = ['January','February','March','April','May','June','July','August','September','October','November','December']
+
+	months.each do |month|
+		if month == cohort.capitalize
+			# if it does match
+			return true
+		end
+	end	
+	false
+end
+
 def input_students
-	puts "Please enter the names of students followed by their hobby"
+	puts "Please enter some information about the students"
 	puts "to finish, just hit return twice"
 	# create an empty array
 	students = []
@@ -37,18 +50,33 @@ def input_students
 	name = gets.chomp.capitalize
 	puts 'And now a hobby'
 	hobby = gets.chomp
+	puts 'Which cohort are they?'
+	cohort = gets.chomp
 	
 	# while the name is not empty, repeat this code
+
 	while !name.empty? && !hobby.empty? do
+		if !cohort.empty? && check_month(cohort)
+			#if user has put in a cohort then make it a symbol
+			cohort = cohort.to_sym
+		else
+			#if user hasn't put in a cohort, or a proper month, assume that they are june
+			cohort = :June
+			puts 'That doesn\'t look like a month, so we will assume they are in the june cohort' 
+		end
+
 		# add the student hash to the array
-		students << {:name => name, :hobby => hobby, :cohort => :june}
+		students << {:name => name, :hobby => hobby, :cohort => cohort}
 		puts "now we have #{students.length} students"
 
-		# get another name from the user
+		# get the first name
 		puts 'Please enter a name first'
 		name = gets.chomp.capitalize
 		puts 'And now a hobby'
 		hobby = gets.chomp
+		puts 'Which cohort are they?'
+		cohort = gets.chomp
+		
 	end
 	#return the array of students
 	students
@@ -74,7 +102,7 @@ def print(students)
 	max = students.length
 	while count < max do
 		number = count + 1
-		puts number.to_s + ". #{students[count][:name]} in the #{students[count][:cohort]} cohort likes #{students[count][:hobby]}"
+		puts (number.to_s + ". #{students[count][:name]} in the #{students[count][:cohort]} cohort likes #{students[count][:hobby]}").center(100)
 		count += 1
 	end
 end
