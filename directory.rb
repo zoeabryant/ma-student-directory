@@ -34,7 +34,7 @@ def input_students
 
 	# get the first name
 	puts 'Please enter a name first'
-	name = gets.chomp
+	name = gets.chomp.capitalize
 	puts 'And now a hobby'
 	hobby = gets.chomp
 	
@@ -46,7 +46,7 @@ def input_students
 
 		# get another name from the user
 		puts 'Please enter a name first'
-		name = gets.chomp
+		name = gets.chomp.capitalize
 		puts 'And now a hobby'
 		hobby = gets.chomp
 	end
@@ -60,8 +60,22 @@ def print_header
 end
 
 def print(students)
-	students.each do |student|
-		puts "#{student[:name]} who likes #{student[:hobby]} in the #{student[:cohort]} cohort"
+	# students.each_with_index do |student, index|
+		# number = index + 1
+		# if student[:name].length <= 12
+		# 	puts "#{number}. #{student[:name]} in the #{student[:cohort]} cohort likes #{student[:hobby]}"
+		# end
+		# if student[:name].index('A') == 0
+		# 	puts "#{number}. #{student[:name]} in the #{student[:cohort]} cohort likes #{student[:hobby]}"
+		# end
+	# end
+
+	count = 0
+	max = students.length
+	while count < max do
+		number = count + 1
+		puts number.to_s + ". #{students[count][:name]} in the #{students[count][:cohort]} cohort likes #{students[count][:hobby]}"
+		count += 1
 	end
 end
 
