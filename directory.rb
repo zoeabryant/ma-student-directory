@@ -25,4 +25,6 @@ puts "Hannah - mountaineering"
 puts "Joe - dog walking"
 puts "Alex - music"
 puts "Jeremy - not being here"
-print "We have 25 great students (by our count)"
+print "We have "
+print 25
+puts " great students (by our count)"
