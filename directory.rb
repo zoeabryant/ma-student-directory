@@ -1,31 +1,35 @@
-student_count = 25
 #first we print the list of students
+students = [
+	"Dave - golf",
+	"Eddie - rock climbing",
+	"Catharina - travelling",
+	"Igor - making music",
+	"Marco - surfing",
+	"Lisa - swimming",
+	"Michiel - listening to music",
+	"Jean - movies",
+	"Nicola - running",
+	"Jennie - travelling",
+	"Iona - opera singing whilst boxing",
+	"Nikesh - loads of shit",
+	"Chloe - yoga",
+	"Toan - snowboarding",
+	"Jamie - football",
+	"Peter - cycling",
+	"Talal - swimming",
+	"Charlie - guitar",
+	"Charlotte - squash",
+	"Thomas - running",
+	"Zoe - origami",
+	"Hannah - mountaineering",
+	"Joe - dog walking",
+	"Alex - music",
+	"Jeremy - not being here"
+]
 puts "The students of my cohort at Makers Academy"
 puts "------------------"
-puts "Dave - golf"
-puts "Eddie - rock climbing"
-puts "Catharina - travelling"
-puts "Igor - making music"
-puts "Marco - surfing"
-puts "Lisa - swimming"
-puts "Michiel - listening to music"
-puts "Jean - movies"
-puts "Nicola - running"
-puts "Jennie - travelling"
-puts "Iona - opera singing whilst boxing"
-puts "Nikesh - loads of shit"
-puts "Chloe - yoga"
-puts "Toan - snowboarding"
-puts "Jamie - football"
-puts "Peter - cycling"
-puts "Talal - swimming"
-puts "Charlie - guitar"
-puts "Charlotte - squash"
-puts "Thomas - running"
-puts "Zoe - origami"
-puts "Hannah - mountaineering"
-puts "Joe - dog walking"
-puts "Alex - music"
-puts "Jeremy - not being here"
+students.each do |student|
+	puts student
+end
 #finally, we print the total
-puts "We have #{student_count} great students"
+puts "We have #{students.length} great students"
