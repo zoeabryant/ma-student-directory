@@ -1,30 +1,30 @@
 #first we print the list of students
 students = [
-	"Dave - golf",
-	"Eddie - rock climbing",
-	"Catharina - travelling",
-	"Igor - making music",
-	"Marco - surfing",
-	"Lisa - swimming",
-	"Michiel - listening to music",
-	"Jean - movies",
-	"Nicola - running",
-	"Jennie - travelling",
-	"Iona - opera singing whilst boxing",
-	"Nikesh - loads of shit",
-	"Chloe - yoga",
-	"Toan - snowboarding",
-	"Jamie - football",
-	"Peter - cycling",
-	"Talal - swimming",
-	"Charlie - guitar",
-	"Charlotte - squash",
-	"Thomas - running",
-	"Zoe - origami",
-	"Hannah - mountaineering",
-	"Joe - dog walking",
-	"Alex - music",
-	"Jeremy - not being here"
+	{:name => "Dave", :cohort => :June, :hobby => "golf"},
+	{:name => "Eddie", :cohort => :June, :hobby => "rock climbing"},
+	{:name => "Catharina", :cohort => :June, :hobby => "travelling"},
+	{:name => "Igor", :cohort => :June, :hobby => "making music"},
+	{:name => "Marco", :cohort => :June, :hobby => "surfing"},
+	{:name => "Lisa", :cohort => :June, :hobby => "swimming"},
+	{:name => "Michiel", :cohort => :June, :hobby => "listening to music"},
+	{:name => "Jean", :cohort => :June, :hobby => "movies"},
+	{:name => "Nicola", :cohort => :June, :hobby => "running"},
+	{:name => "Jennie", :cohort => :June, :hobby => "travelling"},
+	{:name => "Iona", :cohort => :June, :hobby => "opera singing whilst boxing"},
+	{:name => "Nikesh", :cohort => :June, :hobby => "loads of shit"},
+	{:name => "Chloe", :cohort => :June, :hobby => "yoga"},
+	{:name => "Toan", :cohort => :June, :hobby => "snowboarding"},
+	{:name => "Jamie", :cohort => :June, :hobby => "football"},
+	{:name => "Peter", :cohort => :June, :hobby => "cycling"},
+	{:name => "Talal", :cohort => :June, :hobby => "swimming"},
+	{:name => "Charlie", :cohort => :June, :hobby => "guitar"},
+	{:name => "Charlotte", :cohort => :June, :hobby => "squash"},
+	{:name => "Thomas", :cohort => :June, :hobby => "running"},
+	{:name => "Zoe", :cohort => :June, :hobby => "origami"},
+	{:name => "Hannah", :cohort => :June, :hobby => "mountaineering"},
+	{:name => "Joe", :cohort => :June, :hobby => "dog walking"},
+	{:name => "Alex", :cohort => :June, :hobby => "music"},
+	{:name => "Jeremy", :cohort => :June, :hobby => "not being here"}
 ]
 
 def print_header
@@ -32,9 +32,9 @@ def print_header
 	puts "------------------"
 end
 
-def prints(names)
-	names.each do |name|
-		puts name
+def print(students)
+	students.each do |student|
+		puts "#{student[:name]} who likes #{student[:hobby]} in the #{student[:cohort]} cohort"
 	end
 end
 
@@ -45,5 +45,5 @@ end
 # nothing happens until we call the method!
 
 print_header
-prints(students)
+print(students)
 print_footer(students)
