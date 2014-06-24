@@ -5,6 +5,6 @@ Our first project! Managing a list of students on our Makers Academy course.
 
 How to use
 ----------
-'''shell
+```shell
 ruby directory.rb
-'''
+```
