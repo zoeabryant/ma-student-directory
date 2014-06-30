@@ -15,6 +15,10 @@ Day 3 coding with Dave (@Bayonnaise)! We start again, trying to make the most ef
 ### Day 4 - directory4.rb
 Day 4 we are focussing on something other than student directory. I'm paired with Toan (@yoshdog), who showed me how to use the Date object to check months and sort the students by cohort so I could make this version awesome.
 
+## Day 5 - directory5/
+Introduction to TDD - Test Driven Development - Is a rocky one. I'm paired with Catharina (@CatharinaLD) and we work through the basics of rspec.
+
+
 How to use
 ----------
 ```shell
