@@ -1,6 +1,12 @@
 require 'directory'
 
 describe "student directory" do
+	let(:student){ {name: 'Name', cohort: 'cohort'} } #global var rspect version!
+
+	# let(:student) do
+	# 	{name: 'Name', cohort: 'cohort'}
+	# end
+
 	it 'prints header' do
 		expect(self).to receive(:puts).with('Welcome to Student Directory')
 		print_header
@@ -30,6 +36,23 @@ describe "student directory" do
 	it 'prints footer' do
 		expect(self).to receive(:puts).with("Overall, we have #{students.length} students.")
 		print_footer
+	end
+
+	it 'transforms students to csv' do
+		expect(students_to_csv(student)). to eq ['name', 'cohort']
+	end
+
+	it 'saves the students' do
+		students = [student]
+		csv_bananas = double :bananas # testing double, stunt double, must be named same as yield and expect below as demonstrated by _bananas
+		expect(csv_bananas).to receive(:<<).with(students_to_csv(student))
+		expect(CSV).to receive(:open).with('./students.csv', 'wb').and_yield(csv_bananas)
+
+		# CSV.open('.students.csv', 'wb') do |csv|
+		# 	csv << student
+		# end
+
+		save(students)
 	end
 
 	context 'with three students' do
