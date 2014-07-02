@@ -18,8 +18,11 @@ Day 4 we are focussing on something other than student directory. I'm paired wit
 ### Day 5 - directory5/
 Introduction to TDD - Test Driven Development - Is a rocky one. I'm paired with Catharina (@CatharinaLD) and we work through the basics of rspec.
 
-###Day6 - directory6/
+###Day 6 - directory6/
 TDD we meet again, this time with Jenny (@thejennywang). Started from scratch and built up our tests again, graduating to checking CSV files with doubles.
+
+###Day 7 - directory7/
+Working with Iona (@ionaselig), tackling rspec again...
 
 
 How to use
