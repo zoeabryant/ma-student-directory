@@ -2,6 +2,7 @@ Student Directory
 =================
 
 First project at Makers Academy is to create a list of students on our course, and handle that data.
+Started this on Day 2 of Makers Academy. Day count is by number of days on this specific project.
 
 ### Day 1 - directory.rb
 First attempt at coding with Hannah (@HanWax)! We ask for names and put them into a nice array and output them onto the screen. We try a few different ways of doing this as we progress through the lesson. We bother a lot of people for their names and hobbies so we have an accurate data set to start with.
@@ -19,10 +20,14 @@ Day 4 we are focussing on something other than student directory. I'm paired wit
 Introduction to TDD - Test Driven Development - Is a rocky one. I'm paired with Catharina (@CatharinaLD) and we work through the basics of rspec.
 
 ###Day 6 - directory6/
-TDD we meet again, this time with Jenny (@thejennywang). Started from scratch and built up our tests again, graduating to checking CSV files with doubles.
+TDD we meet again, this time with Jenny (@thejennywang). Started from scratch and built up our tests again, graduating to checking CSV files with doubles and using lets and before methods.
 
 ###Day 7 - directory7/
 Working with Iona (@ionaselig), tackling rspec again...
+
+###Day 8 - directory8/
+Working with Joe (@joedowdell). Final showdown on understanding rspec.
+
 
 
 How to use
